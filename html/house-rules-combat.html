@@ -22,6 +22,11 @@ layout: default
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#ready-action">
+              Ready Action
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#damage-and-dying">
               Damage and Dying
             </a>
@@ -46,6 +51,11 @@ layout: default
               Parrying
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ranged-in-melee">
+              Ranged Weapons When in Melee
+            </a>
+          </li>
       </div>
     </nav>
 
@@ -61,21 +71,18 @@ layout: default
         <div class="indented">
           <p>
             If you specify a target to attack, you may change that target during the resolution phase (i.e., after 
-            initiative is rolled), but only to a target that is within your normal reach of the original target.  For
-            most characters, this will be 5', so your new target must be within 5' of your original target.
+            initiative is rolled).  For melee attacks, this will impose a -2 penalty to hit, and it must be within
+            melee range of your original target.  If you were planning to move as part of your attack, you must still
+            move to your original target.  However, a character does have lattitude in choosing their path, so some
+            flexibility will be granted here, as long as they don't go too far off their reasonable original target.
+            For example, if a player indicates that they will move and attack goblin #1, but this creature goes down
+            before the character's action comes up, he may veer a bit to move to goblin #2 who was standing 15'
+            from his companion.  However, if goblin #2 was actually 30' feet in the opposite direction, that would
+            not be reasonable and thus the attacker could not move and attack goblin #2.  
           </p>
           <p>
-            If your original target is Large or greater in size, you can only target an opponent within your reach of the
-            original facing of the target that you would have attacked.  Note that you cannot move after your first attack,
-            so if you're switching targets after your first attack, this may put opponents out of range even if they are
-            within 5' of your original target.
-          </p>
-          <p>
-            For example, a fighter announces that he will perform a Move and Attack action to move over to a stone giant
-            and attack.  But when it finally comes to his action, the stone giant has been slain.  He can alter his move slightly
-            to target another enemy if that enemy was within 5' of the stone giant's front facing.   On the other hand,
-            if the fighter slays the stone giant with his first attack, he could only attack other enemies with his subsequent
-            attacks in that round if they were within 5' of his current location.
+            For ranged weapons, the to hit penalty is -2 for each 5' of distance from the original target after the
+            first 5', i.e., -2 at 10', -4 at 15', -6 at 20', and so on.  
           </p>
         </div>
 
@@ -128,6 +135,67 @@ layout: default
             </p>
         </div>
 
+        <a name="ready-action"></a>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <h3 class="h3">Ready Action</h3>
+        </div>
+        <div class="indented">
+            <p>
+              A combatant may forego their normal action to take a specific action later based on a specified trigger.  
+              The trigger may be somewhat general, e.g., "I fire my bow when an enemy comes in range", but it must 
+              relate to a specific event that may - or may not - occur.  If that trigger does not occur, then the 
+              combatant may not take the action and therefore loses their action.  The trigger must relate to an in-game
+              event, not a game mechanic, i.e., "I wait until after my ally acts" is valid, but "I wait until after 
+              segment 9" is not.  The trigger must have a chance of failing.  Segment 9 will always occur, but a character
+              may fail to take their action, e.g., the character might be knocked down before their turn.  You also
+              cannot specify a trigger that is already true, e.g., "I shoot at someone in range" if there are already
+              opponents in range.  Saying "I shoot when someone comes in range" if there are already opponents in
+              range is acceptable, since in this case you could only shoot at anyone entering range and not at the
+              opponents already in range.
+            </p>
+            <p>
+              A combatant may specify any action to ready, subject to the DM's approval.  As a general rule,
+              it should include things that could be prepared and then held.  There are two specific actions
+              that cannot be readied, however:
+              <ul>
+                <li>Full Attack</li>
+                <li>Full Move</li>
+              </ul>
+            </p>
+            <p><em>Charge</em> - The charge action is altered slightly when done as a readied action.  The maximum
+              movement is reduced from 1.5 the character's full move to just the character's full move (e.g., from 18 
+              for a human to 12).  All other benefits and limitations (including the minimum distance) for a charge
+              remain in force.
+            </p>
+            <p>
+              A character normally takes an action after the trigger occurs, but the player may elect to have the
+              action take place while the trigger is occuring.  This cannot pre-empt the trigger, however.  When
+              the player elects to do this, the actions are considered to be simultaneous.  When this occurs, all
+              attacks are resolved before any damage is applied.  So, for example, if the player controlling a 
+              fighter say, "I'm readying an action to attack anyone who closes with me," then when an enemy
+              closes, the fighter's attack and the enemy's attack (assuming had planned to attack) would occur
+              simultaneously.
+            </p>
+            <p>
+              In the special case of movement, the trigger may occur in the middle of an opponent's movement.  Say
+              that a player indicates they will charge if an enemy comes in range and then an opponent charges another
+              character taking a path that brings them within charge distance of the original character.  At the point
+              that the opponent enters range, the character may charge.  In this case, both movements occur simultaneously,
+              with each character taking 5' increments in turn.  This will determine where the characters finally meet,
+              though note that it is possible that the charging character could actually never reach the opponent.
+            </p>
+            <p>
+              When specifying a general trigger, e.g., "I shoot when someone comes in range", you may choose which target
+              to shoot at, even if they are not the first to fulfill the trigger.  Similarly, a player can always elect
+              to not take the action after the trigger event occurs.
+            </p>
+            </p>
+              Finally, if the trigger does not occur or something occurs to make that action no longer possible, then the combatant 
+              loses that action and may not take any other that round.  For spellcasters this works just like having their spell interrupted - 
+              the caster loses the spell as if it was cast.
+            </p>
+        </div>
+
         <a name="damage-and-dying"></a>
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
             <h3 class="h3">Damage and Dying</h3>
@@ -141,21 +209,15 @@ layout: default
             <p>
               A character may stabilize in one of two ways.  First, another character may spend a round tending their wounds, 
               which will immediately stop further loss of hit points.  However, the unconscious character will remain unconscious.  
-              Second, another character may apply healing magic.  This will immediately restore the character to 1 hit point, 
-              irrespective of the amount of healing done.  However, they are weak and feeble.  They can take no strenuous actions such 
-              as fighting or casting a spell and can only move at half-speed.  They will remain in this condition until they have had 
-              one full day of rest (no exertion or traveling).  Further healing will do the character no good until they have recovered.
+              Second, another character may apply healing magic.  This will be applied to their hit points as normal, though
+              the character will not regain consciousness until the character's hit points is above zero.
             </p>
             <p>
-              A heal spell is the only healing spell that can restore a character from negative hit points to full health without need 
-              for a day of rest.  Any spells the character may have known are still wiped out, however.
-            </p>
-            <p>
-              Magical regeneration is equally ineffective at restoring the character as other heal spells.  It may return the character to
-              1 hp, but thereafter it cannot heal the character until they have had a full day of rest.  Natural regeneration, i.e., due to
-              a high Constitution score, will eventually restore the character to full health, but they will remain weak and feeble, as described 
-              above, until they recover half their full hit points.  Magical healing will not help them get to half their hit points, but once
-              they reach this threshold, they can act normally and healing magic will have its normal effect.
+              Once a character reaches 1 or more hit points, they may act normally, though they will normally be on the ground and
+              thus must stand and recover their weapon (it does not remain glued in their hand).  This can be done as a single full-round
+              action.  Alternatively, they could chose to stay on the ground as they recover the weapon, hoping their opponents do not
+              notice them, though this does take the full round.  They could then stand in the next round by taking the Move and Attack
+              action, with the standing being the move part of that action.
             </p>
         </div>
 
@@ -203,6 +265,19 @@ layout: default
         </div>
         <div class="indented">
           <p>The optional rules on p. 133 of the PHB titled "Parrying" will be used.</p>
+        </div>
+
+        <a name="ranged-in-melee"></a>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <h3 class="h3">Ranged Weapons When in Melee</h3>
+        </div>
+        <div class="indented">
+          <p>
+            This refers to the situation where a character using a ranged weapon is in melee combat, irrespective of whether
+            they are targeting their melee combatant or someone else.  In this circumstance, the character may shoot
+            normally, but if they take any damage or fail a saving throw prior to their action, they will lose their
+            action.
+          </p>
         </div>
 
 <!-- Template for new entry
