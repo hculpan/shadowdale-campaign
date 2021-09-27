@@ -1,0 +1,192 @@
+---
+layout: default
+---
+
+<div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse make-me-sticky">
+      <div class="position-sticky pt-3 make-me-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#thac0-calculations">
+              THAC0 Calculations
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#combat-actions">
+              Actions in Combat
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#order-of-combat">
+              Order of Combat
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#firing-into-melee">
+              Firing into a Melee
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h1">Cheat Sheet - Combat</h1>
+        </div>
+
+        <a name="thac0-calculations"></a>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <h3 class="h3">THAC0 Calculations</h3>
+        </div>
+        <div class="indented">
+            <ul>
+                <li>Character’s THAC0 – Attack Roll = AC hit (remember: higher AC is worse)</li>
+                <li class="indented">Example: THAC0=15, attack roll is 10, so 15-10 means the character hits AC 5 or higher (worse)</li>
+                <li class="indented">Example: THAC0=10, attack roll is 15, so 10-15 means the character hits AC -5 or higher (worse)</li>
+                <li>Modifiers (e.g., Strength to-hit bonus and magical weapon bonus) add to Attack Roll</li>
+                <li class="indented">Example from above: Character has +2 STR bonus and is using a +2 magical weapon, so effective roll is 19, so they hit -9 AC or higher (worse)</li>
+            </ul>
+        </div>
+
+        <a name="combat-actions"></a>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <h3 class="h3">Actions in Combat</h3>
+        </div>
+        <div class="indented">
+          <ul>
+            <li>Full Attack</li> 
+            <ul>
+              <li>Cannot move</li>
+              <li>Make all available attacks</li>
+              <li>Note that multiple attacks with the same weapon are handled using <a href="#staggered-resolution">Staggered resolution</a>.
+            </ul>
+            <li>Full Move</li>
+            <ul>
+              <li>Move your full movement rate without attacking.</li>
+              <li>Note that if you move into any enemy's threatened space, your movement immediately ends.</li>
+            </ul>
+            <li>Move and Attack</li>
+            <ul>
+              <li>Move half your movement rate and make one attack.</li>
+              <li>Note that if you move into any enemy's threatened space, your movement immediately ends.</li>
+            </ul>
+            <li>Charge</li>
+            <ul>
+              <li>Move 50% more than your full movement rate and attack</li>
+              <li>Gain +2 to your attack roll and -2 to your initiative</li>
+              <li>Lose your Dexterity bonus for AC and suffer a penalty of 1 to AC</li>
+              <li>If the defender is using a polearm or spear and sets it against the charge, he inflicts double damage on a successful hit</li>
+              <li>Only targets at least half your movement rate away and within the range of the charge are allowable targets for a charge.</li>
+              <li>The last half of the charge movement must be in a straight line.</li>
+              <li>Failing to make an attack at the end of the charge, for whatever reason, results in an additional 1 AC penalty.</li>
+              <li>Note that if you move into any enemy's threatened space, your movement immediately ends.</li>
+            </ul>
+            <li>Parrying</li>
+            <ul>
+              <li>A character may choose to concentrate on parrying incoming attacks in lieu of making attacks, casting spells, moving, etc.</li>
+              <li>Non-warrior characters gain 1/2 their level as an AC bonus.</li>
+              <li>Warrior characters gain 1/2 + 1 their level as an AC bonus.</li>
+              <li>This bonus AC does not apply to rear, missile, or magical attacks.</li>
+            </ul>
+            <li>Withdrawal</li>
+            <ul>
+              <li>Move half your movement rate and make no attack</li>
+              <li>If you are fighting two or more opponents and they are on opposite sides of you, you cannot perform this action.</li>
+            </ul>
+            <li>Flee</li>
+            <ul>
+              <li>Move your full movement rate and make no attack</li>
+              <li>Any opponents that you are in melee with get a single free attack.</li>
+            </ul>
+            <li>Cast a spell</li>
+            <ul>
+              <li>Cannot move</li>
+              <li>For purposes of spell interruption, you begin casting at segment 0.  Thus if you take damage or fail
+              a saving throw before you spell goes off, you will lose the spell.</li>
+            </ul>
+            <li>Most other actions take a full round.</li>
+            <li>Minor actions take no action (e.g., speaking, dropping a held item, drawing a weapon).</li>
+          </ul>
+        </div>
+
+        <a name="order-of-combat"></a>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <h3 class="h3">Order of Combat</h3>
+        </div>
+        <div class="indented">
+          <p>Combat is broken up into rounds, each roughly 1 minute long.  Each round contains the following steps:</p>          
+          <ol>
+              <li>Check for surprise (first round only if applicable)</li>
+              <ul>
+                <li>Each individual rolls 1d10, applying Reaction Adjustment (Dexterity).  </li>
+                <li>Surprised only on a 1-3</li>
+              </ul>
+              <li>DM secretly determines NPC actions</li>
+              <li>Players announce actions in whatever order they please</li>
+              <ul>
+                <li>Actions should contain reasonable specifity.</li>
+                <li>For attacks, targets should be identified.</li>
+                <li>For moves, the destination should be stated.</li>
+              </ul>
+              <li>Each group rolls 1d10 for initiative (lower is better)</li>
+              <ul>
+                <li>Combatants add Weapon Speed </li>
+                <li>Spellcasters add Casting Time</li>
+                <li>Simultaneous initiative is possible</li>
+                <li>Note that Dexterity does not alter initiative in this game</li>
+              </ul>
+              <li>DM starts initiative count-up starting at 1</li>
+              <ul>
+                <li>Actions are resolved in sequence</li>
+                <li>All actions in same segment are resolved before results applied to battlefield</li>
+                <ul>
+                  <li>Two combatants who attack each other in the same segment could very well kill each other</li>
+                </ul>
+                <li>Combatants have limited ability to change action if situation changed mid-combat</li>
+                <ul>
+                  <li>Attackers may opt to attack other targets, but only if they are within 5' (one square) of their original target.</li>
+                  <li>For moves, an individual may elect to move less than the distance they indicated when declaring their action, i.e., abort part
+                  or all of their move.  However, they cannot change their movement path, only shorten it.  They cannot otherwise change their action, 
+                  however.  For example, a player announces that he will make a Full Move toward his enemy, but during the resolution phase his 
+                  enemy moves closer, so he only moves his movement rate, not double.  He could not change his action from Full Move to 
+                  Move-and-Attack; he can only choose to not move double his movement rate as he had originally declared.</li>
+                </ul>
+                <li>Spellcasters start their casting on segment 0 and the spell goes off on the segment they act on</li>
+              </ul>
+              <a name="staggered-resolution"></a>
+              <li>Staggered resolution of multiple attacks</li>
+              <ul>
+                <li>For combatants who make multiple attacks with the same weapon, Step 5 will start over for all characters to make their 2nd attack, 3rd attack, etc.</li>
+                <li>Initiative is not re-rolled for these staggered attacks, so they will be resolved in exactly the same order as the first series of actions for the round.</li>
+              </ul>
+          </ol>
+        </div>
+
+        <a name="firing-into-melee"></a>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <h3 class="h3">Firing into a Melee</h3>
+        </div>
+        <div class="indented">
+          <p><em>This is a summary of the rules on p. 132 of the PHB.</em></p>
+          <p>It's important to realize that in melee, combatants are constantly moving around.  Therefore it's very difficult for an attacker
+          firing into melee to reliably target a specific individual.</p>
+          <ul>
+            <li>When firing into a melee, you declare your target.</li>
+            <li>The DM then counts the number of figures in the immediate area, including both opponents and allies of the attacker.</li>
+            <li>Each Medium figure counts as 1, larger figures count more, and smaller less.</li>
+            <li>This will result in a number, and the DM secretly rolls a die determining which combatant the attacker is actually attacking.</li>
+            <li>The attacker makes his attack roll, indicating what AC he hits, and the DM indicates which combatant he hit.</li>
+          </ul>
+        </div>
+
+<!-- Template for new entry
+        <a name=""></a>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <h3 class="h3"></h3>
+        </div>
+        <div class="indented">
+        </div>
+-->
+    </main>
+</div>

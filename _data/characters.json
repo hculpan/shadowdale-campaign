@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Agast Shandril",
+        "race": "Human",
+        "hear": "15%",
+        "class": "Wizard",
+        "level": "1",
+        "ac": "10",
+        "alignment": "NG",
+        "notes": ""
+    },
+    {
+        "name": "Kasser Zebblenabble",
+        "race": "Gnome",
+        "hear": "25%",
+        "class": "Rogue/Illusionist",
+        "level": "1/1",
+        "ac": "14",
+        "alignment": "CN",
+        "notes": ""
+    },
+    {
+        "name": "Travamir",
+        "race": "Half-elf",
+        "hear": "15%",
+        "class": "Ranger/Cleric",
+        "level": "1/1",
+        "ac": "14",
+        "alignment": "CG",
+        "notes": ""
+    },
+    {
+        "name": "Fendor",
+        "race": "Human",
+        "hear": "15%",
+        "class": "Fighter",
+        "level": "1",
+        "ac": "18",
+        "alignment": "NG",
+        "notes": "npc"
+    }
+]

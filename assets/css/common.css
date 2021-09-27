@@ -1,0 +1,23 @@
+/* Show it is fixed to the top */
+body {
+    min-height: 75rem;
+    padding-top: 7rem;
+    background-color: black;
+    color: white;
+}
+
+.indented {
+    margin-left: 5%;
+    margin-right: 25%;
+}
+
+.double-indented {
+    margin-left: 10%;
+}
+
+.make-me-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75; 
+  }
+
