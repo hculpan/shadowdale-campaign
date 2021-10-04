@@ -7,8 +7,8 @@ layout: default
       <div class="position-sticky pt-3 make-me-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="#thac0-calculations">
-              THAC0 Calculations
+            <a class="nav-link" href="#combat-calculations">
+              To Hit and AC calculations
             </a>
           </li>
           <li class="nav-item">
@@ -35,17 +35,20 @@ layout: default
             <h1 class="h1">Cheat Sheet - Combat</h1>
         </div>
 
-        <a name="thac0-calculations"></a>
+        <a name="combat-calculations"></a>
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-            <h3 class="h3">THAC0 Calculations</h3>
+            <h3 class="h3">To Hit and AC Calculations</h3>
         </div>
         <div class="indented">
             <ul>
-                <li>Character’s THAC0 – Attack Roll = AC hit (remember: higher AC is worse)</li>
-                <li class="indented">Example: THAC0=15, attack roll is 10, so 15-10 means the character hits AC 5 or higher (worse)</li>
-                <li class="indented">Example: THAC0=10, attack roll is 15, so 10-15 means the character hits AC -5 or higher (worse)</li>
-                <li>Modifiers (e.g., Strength to-hit bonus and magical weapon bonus) add to Attack Roll</li>
-                <li class="indented">Example from above: Character has +2 STR bonus and is using a +2 magical weapon, so effective roll is 19, so they hit -9 AC or higher (worse)</li>
+                <li>Converting from THAC0 and descending AC to To Hit bonus and ascending AC is very simple.</li>
+                <li>THAC0 to To Hit bonus: Take the character's THAC0 and subtract it from 20.  For example, for a THAC0
+                  of 17, simple do 20 - 17 for a +3 To Hit bonus.
+                </li>
+                <li>Converting from descending AC to ascending is done the same way: Subtract the descending AC from 20.
+                  For example, to convert an AD&amp;D 2E Armor Class of 2, subtract this from 20,
+                  i.e., 20 - 2 gives you an ascending AC of 18. 
+                </li>
             </ul>
         </div>
 
@@ -99,6 +102,8 @@ layout: default
               <li>A character can never ready a Full Attack or Full Move action.</li>
               <li>The character may ready a Charge, but they are limited only to their full movement rate rather than the x1.5 movement rate given in the Charge rules.</li>
               <li>All attacks made as part of a readied action suffer a -2 penalty to the attack roll.</li>
+              <li>The initiative for a readied action is the same as when not readying.  A readied action cannot be performed before the individual's normal turn in initiative, 
+                but if the trigger occurs prior to the character's initiative, they may then act on their initiative.</li>
             </ul>
             <li>Withdrawal</li>
             <ul>
